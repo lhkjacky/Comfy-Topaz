@@ -107,7 +107,7 @@ class TopazPhotoAI:
         self.this_dir = os.path.dirname(os.path.abspath(__file__))
         self.comfy_dir = os.path.abspath(os.path.join(self.this_dir, '..', '..'))
         self.subfolder = 'upscaled'
-        self.output_dir = os.path.join(self.comfy_dir, 'temp')
+        self.output_dir = os.path.join(self.comfy_dir, 'temp', self.subfolder)
         self.prefix = 'tpai'
         # self.tpai = 'C:/Program Files/Topaz Labs LLC/Topaz Photo AI/tpai.exe'
 
