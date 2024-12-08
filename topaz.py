@@ -107,7 +107,7 @@ class TopazPhotoAI:
         self.this_dir = os.path.dirname(os.path.abspath(__file__))
         self.comfy_dir = os.path.abspath(os.path.join(self.this_dir, '..', '..'))
         self.subfolder = 'upscaled'
-        self.output_dir = os.path.join(self.comfy_dir, 'temp', self.subfolder)
+        self.output_dir = os.path.join(self.comfy_dir, 'temp')
         self.prefix = 'tpai'
         # self.tpai = 'C:/Program Files/Topaz Labs LLC/Topaz Photo AI/tpai.exe'
 
@@ -195,7 +195,7 @@ class TopazPhotoAI:
         if compression < 0 or compression > 10:
             raise ValueError('compression must be between 0 and 10')        
         
-        target_dir = os.path.join(self.output_dir, self.subfolder)
+        target_dir = os.path.join(self.output_dir)
         tpai_args = [
             tpai_exe,
             '--output',        # output directory
